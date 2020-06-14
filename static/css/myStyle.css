@@ -2,3 +2,12 @@
     background-image: url("../images/ocean.jpg");
     color: rgb(42, 5, 209);
 }
+
+#infoPanel {
+    background-color: white;
+}
+
+#infoPanel h6 {
+    background-color: blue;
+    color: white;
+}
