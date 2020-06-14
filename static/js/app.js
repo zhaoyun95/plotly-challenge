@@ -150,28 +150,46 @@ d3.json(url).then(function(data){
         var data = [
             {
               type: "indicator",
-              mode: "gauge+number+delta",
+              mode: "gauge+number",
               value: subject.metadata.wfreq,
               title: { text: "Belly Button Washing Frequency", font: { size: 24 } },
-            //   delta: { reference: 400, increasing: { color: "RebeccaPurple" } },
               gauge: {
-                axis: { range: [0, 10], tickwidth: 1, tickcolor: "darkblue" },
-                bar: { color: "black" },
+                axis: { 
+                    range: [0, 9], 
+                    
+                    tickwidth: 1, 
+                    tickcolor: "darkblue",
+                    nticks: 10 
+                    // tickmode: "array",
+                    // tickvals: [0,1,2,3,4,5,6,7,8,9],
+                    // ticktext: ['0-1','1-2','2-3','3-4','4-5','5-6','6-7','7-8','8-9'],
+                    // ticks: "outisde",
+                    // tickangle: 0,
+                    // showticklabels: true,
+                    // tickprefix: "xxxxx"
+                    
+                },
+                bar: { color: "purple" },
                 bgcolor: "white",
-                borderwidth: 2,
+                borderwidth: 4,
                 bordercolor: "gray",
                 steps: [
-                  { range: [0, 2], color: "white" },
-                  { range: [2, 4], color: "yellow" },
-                  { range: [4, 6], color: "orange" },
-                  { range: [6, 8], color: "green" },
-                  { range: [8, 10], color: "blue" }
+                  { range: [0, 1], color: "white" },
+                  { range: [1, 2], color: "white" },
+                  { range: [2, 3], color: "yellow" },
+                  { range: [3, 4], color: "yellow" },
+                  { range: [4, 5], color: "orange" },
+                  { range: [5, 6], color: "orange" },
+                  { range: [6, 7], color: "green" },
+                  { range: [7, 8], color: "green" },
+                  { range: [8, 9], color: "blue" },
+                  { range: [9, 10], color: "blue" }
 
                 ],
                 threshold: {
                   line: { color: "red", width: 4 },
                   thickness: 0.75,
-                  value: 490
+                  value: 3
                 }
               }
             }
