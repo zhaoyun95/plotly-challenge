@@ -3,11 +3,6 @@
     color: rgb(42, 5, 209);
 }
 
-#infoPanel {
-    background-color: rgb(214, 205, 205);
-}
-
-#infoPanel h6 {
-    background-color: blue;
-    color: white;
+body {
+    background-color: cornflowerblue;
 }
